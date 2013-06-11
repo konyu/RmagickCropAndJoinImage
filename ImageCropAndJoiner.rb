@@ -21,7 +21,7 @@ class ImageCropAndJoiner
 	org_img = Magick::Image.read(img_path).first
 
 	#分割するファイルの枚数を計算
-	w_times=org_img.columns/CUT_IMG_WIDTH
+	w_times=org_img.columns/CUT_IMG_WIDTH+1
 	h_times=org_img.rows/CUT_IMG_HEIGHT+1
 
 	#犀の目にファイルを分割
